@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang=""es>
+<html lang=""es class="h-100">
     <head>
         <meta charset="UTF-8">
        
@@ -14,12 +14,13 @@
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         
     </head>
-    <body>
-        <header>
+    <body class="h-100" >
+        
+        <header class="d-flex justify-content-center">
             <h1><a href="{%url 'home'%}">Django Blog</a></h1>
         </header>
-        <nav class="nav-main">
-            <h1>menu</h1>
+        <nav class="navbar d-flex justify-content-between nav-main p-2">
+            <h1 class="nav-link" href="#">menu</h1>
             {% if user.is_authenticated %}
                 <p> Bienvenido {{user.username}}!</p>
                 <p><form id="logout-form" action=" {% url 'logout' %}" method="post">
@@ -31,18 +32,19 @@
             <p>Usuario no ha iniciado sesión</p>
             <p><form id="login-form" action="{% url 'login' %}" method="get">
                 {% csrf_token %}
-                <button class="bs5- btn-danger" type="submit">iniciar sesion</button>
+                <button class="btn btn-info ml-auto"  type="submit">iniciar sesion</button>
             </form></p>
 
             <p><form id="signup-form" action="{% url 'signup' %}" method="get">
                 {% csrf_token %}
-                <button class="bottom-m" type="submit">Registrarse</button>
+                <button class="btn btn-info ml-auto" type="submit">Registrarse</button>
             </form></p>
             {% endif %}
         </nav>
-        <main>
-        {% block content %}
-        {% endblock content %}
+        <main class="d-flex justify-content-center h-100 ">
+            {% block content %}
+            {% endblock content %}
         </main>
+        <script src="{% static 'js/script.js' %}"></script>
     </body>
 </html>
