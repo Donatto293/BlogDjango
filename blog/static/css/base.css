@@ -1,0 +1,68 @@
+
+body{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 15px;
+
+}
+
+header{
+    border-bottom: 4px solid rgb(0,0,0);
+    margin-bottom:2rem ;
+    font-size: 60px;
+    display: flex;
+}
+
+header h1 a{
+    color: rgb(124, 3, 236);
+    text-decoration: chocolate;
+
+}
+.nav-main{
+    border-bottom: 4px solid rgb(0,0,0);
+    margin-bottom: 2rem;
+    font-size: 20px;
+    display: flex;
+    background-color: rgb(218,85,19);
+}
+nav h1{
+    color: rgb(203,173,21);
+    padding-left:50px;
+    padding-right: 50px;
+}
+.nav-a {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.nav-left{
+    margin-right: auto;
+}
+
+.nav-right{
+    display: flex;
+    padding-top: 2rem;
+}
+.post-entry{
+    margin-bottom: 2rem;
+}
+
+.post-entry p{
+    margin: 0.5rem 0;
+}
+
+.post-entry h2 a,
+.post-entry h2 a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+.post-entry p{
+    margin:0;
+    font-weight:400;
+
+}
+
+.post-entry h2 a:hover{
+    color:red;
+}
+
